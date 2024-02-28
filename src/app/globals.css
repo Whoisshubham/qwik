@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@keyframes animate-ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Change navigation color */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #257378 !important;
+  /* Change this to the desired color */
+}
+
+/* Change navigation hover color */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #165256 !important;
+  /* Change this to the desired hover color */
+}
+
+
+/* Change pagination color */
+.swiper-pagination {
+  color: #257378 !important;
+  /* Change this to the desired color */
+}
+
+/* Change pagination bullet color */
+.swiper-pagination-bullet {
+  background-color: #257378 !important;
+  /* Change this to the desired color */
+}
+
+/* Change pagination bullet active color */
+.swiper-pagination-bullet-active {
+  background-color: #257378 !important;
+  /* Change this to the desired color */
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.Toastify__progress-bar--success { background-color: green; }
+.Toastify__progress-bar--error { background-color: rgb(145, 58, 58); }
+.Toastify__progress-bar--warning { background-color: orange; }
+.Toastify__progress-bar--info { background-color: blue; }
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #115380; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+.postionElement{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
