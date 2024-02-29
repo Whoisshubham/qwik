@@ -11,7 +11,7 @@ export async function DELETE(req, content) {
       const deleteData = await appoiments.findById(content.params.id);
 
       if (deleteData) {
-        const status = await appoiments.deleteOne({ id: content.params.id });
+        const status = await appoiments.deleteOne({ _id: content.params.id });
 
         return NextResponse.json({ success: true }, { message: "Send Successfully!" }, { status: 200 });
       } else {
