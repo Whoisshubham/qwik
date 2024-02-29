@@ -1,8 +1,4 @@
 {
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/a5be7f8b-50f0-463f-ac76-40366b8e28f2/resourceGroups/gettested_6feb/providers/Microsoft.Web/sites/gettested",
+    "appService.defaultWebAppToDeploy": "/subscriptions/a5be7f8b-50f0-463f-ac76-40366b8e28f2/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/gettested",
     "appService.deploySubpath": "."
 }
