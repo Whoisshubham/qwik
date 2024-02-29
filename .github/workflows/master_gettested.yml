@@ -53,4 +53,4 @@ jobs:
           app-name: 'gettested'
           slot-name: 'production'
           package: .
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_5b288696c7384a5991a9fe9365862b95 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_73A6E3BB673141A1A4EEFA8DCE3D1666 }}
