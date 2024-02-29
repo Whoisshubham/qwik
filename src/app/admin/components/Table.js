@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useEffect, useState } from 'react'
 import DeleteButton from "./DeleteButton";
 import axios from 'axios';
