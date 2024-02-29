@@ -23,6 +23,7 @@ export async function DELETE(req, content) {
       return NextResponse.json({ "message": "somthing Went Wrong!" }, { status: 400 });
     }
 
+    
   } else {
     // Handle any other HTTP methods
     res.setHeader('Allow', ['DELETE']);
