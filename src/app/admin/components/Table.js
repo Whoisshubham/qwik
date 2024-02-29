@@ -7,7 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 export default function Table() {
     const [data, setData] = useState();
     const [isloading, setIsLoading] = useState(true);
-
     const handleDelete = async (id) => {
         try {
             const response = await fetch(`/api/deleteAppoiment/${id}`, {
@@ -20,13 +19,11 @@ export default function Table() {
                 });
                 const dataAfterDelete = data.filter(item => item._id !== id);
                 setData(dataAfterDelete);
-
             } else {
                 toast.error(responseData.error);
             }
         } catch (e) {
             console.log(e);
-
         }
     };
 
@@ -44,10 +41,8 @@ export default function Table() {
         getCases();
     }, []);
     return (
-
         <>
             {data && data.map((iteams, index) => {
-
                 return (
                     <li key={index} className="py-3 sm:py-4" >
                         <div className="flex items-center">
@@ -89,10 +84,9 @@ export default function Table() {
                                 </p>
                             </div>
                         </div>
-                    </li>)
+                    </li>
+                    )
             })}
         </>
-
-
     )
 }
