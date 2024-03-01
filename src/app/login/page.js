@@ -41,7 +41,7 @@ export default function Login() {
         const isValid = validateForm();
         if (isValid) {
             try {
-                const loginData = await axios.post("api/login", fromData);
+                const loginData = await axios.post(`${process.env.WEB_URL}/api/login`, fromData);
                 if (loginData.status == 200) {
 
                     cookie.set('token', loginData.data.token, { expires: 1, path: '/' });

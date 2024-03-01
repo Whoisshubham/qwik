@@ -8,7 +8,7 @@ export default function Table() {
     const [isloading, setIsLoading] = useState(true);
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`/api/deleteAppoiment/${id}`, {
+            const response = await fetch(`${process.env.WEB_URL}/api/deleteAppoiment/${id}`, {
                 method: 'DELETE',
             });
             const responseData = await response.json();
