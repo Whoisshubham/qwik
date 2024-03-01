@@ -1,8 +1,5 @@
 import { NextResponse } from 'next/server'
-import { NextRequest } from 'next/server'
 import { cookies } from 'next/headers'
-import { redirect } from 'next/dist/server/api-utils';
-import { useRouter } from 'next/navigation';
 const jwt = require('jsonwebtoken');
 
 

@@ -6,7 +6,7 @@ import Inbox from '../inbox/page';
 export default function DeleteButton(props) {
   const router = useRouter();
   const deleteItem = async (props) => {
-    const response = await fetch(`/api/deleteAppoiment/${props.id}`, {
+    const response = await fetch(`${process.env.WEB_URL}/api/deleteAppoiment/${props.id}`, {
       method: 'DELETE',
     });
     const data = await response.json();
