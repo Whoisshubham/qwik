@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useRouter } from 'next/navigation'
 import axios from "axios";
-import { jwt } from 'jsonwebtoken';
 import cookie from 'js-cookie';
 import { ToastContainer, toast } from 'react-toastify';
 export default function Login() {
@@ -41,7 +40,7 @@ export default function Login() {
         const isValid = validateForm();
         if (isValid) {
             try {
-                const loginData = await axios.post(`${process.env.WEB_URL}/api/login`, fromData);
+                const loginData = await axios.post(`${process.env.NEXT_PUBLIC_WEB_URL}/api/login`, fromData);
                 if (loginData.status == 200) {
 
                     cookie.set('token', loginData.data.token, { expires: 1, path: '/' });
